@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Portfólio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+    background-color: #1a1919;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative; /* Para posicionar elementos dentro do cabeçalho */
+}
+
+header img {
+    width: 130px; /* Defina o tamanho da foto */
+    height: 140px; /* Deixe a altura igual à largura para ser quadrada */
+    border-radius: 0; /* Remove o arredondamento */
+    position: absolute; /* Posiciona a imagem em relação ao cabeçalho */
+    top: 50%; /* Centraliza verticalmente */
+    right: 20px; /* Afasta da borda direita */
+    transform: translateY(-50%); /* Ajusta a posição verticalmente */
+    border: 2px solid rgb(10, 10, 10); /* Adiciona borda para destaque */
+}
+
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .problem {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .problem h2 {
+            color: #090a0a;
+        }
+        .solutions {
+            margin-left: 1rem;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .social-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+        }
+        .social-links a:hover {
+            color: #90a0a;
+        }
+        footer {
+            background: #333;
+            ;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="minha_foto.JPEG" alt="Minha Foto">
+        <h1>Mini Portifólio Estágio</h1>
+        <p>Proposta de Integração e Automação Total para Melhorar e Resolver Processos no Atendimento Digital com WhatsApp e Robôs</p>
+        <p> Feito por: Ramon Monteiro</p>
+    </header>
+    <div class="container">
+        <div class="problem">
+            <h2>1. Problema: Redirecionar o WhatsApp Não Oficial para o Oficial</h2>
+            <p><strong>Descrição:</strong> Hoje existe um WhatsApp não oficial que está sendo utilizado para comunicação com os clientes, mas a ideia é transferir esses atendimentos automaticamente para o WhatsApp oficial, que utiliza a API oficial do Meta, sem interrupções na experiência do cliente.</p>
+            <h3>Soluções Propostas:</h3>
+            <ul class="solutions">
+                <li>
+                    <strong>Automação com Middleware de Comunicação:</strong>
+                    <ul>
+                        <li>Desenvolver um middleware que recebe as mensagens do WhatsApp não oficial e redireciona para o WhatsApp oficial via API.</li>
+                        <li>Implementar o uso de APIs como Twilio, Zenvia ou Gupshup, que permitem roteamento e transferência de mensagens entre diferentes plataformas.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Integração com HUG (Plataforma Oficial):</strong>
+                    <ul>
+                        <li>Criar um webhook no WhatsApp não oficial para capturar mensagens e enviá-las automaticamente ao HUG.</li>
+                        <li>Configurar uma camada de integração que conecte o robô do WhatsApp não oficial ao oficial usando a API oficial do Meta.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Solução Temporária:</strong>
+                    <ul>
+                        <li>Incluir mensagens automáticas no WhatsApp não oficial orientando os clientes a continuarem o atendimento no WhatsApp oficial (linkando o número oficial diretamente com o botão do WhatsApp).</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="problem">
+            <h2>2. Problema: Identificar Clientes Aptos ao Saque FGTS e Criar um Banco de Dados Centralizado</h2>
+            <p><strong>Descrição:</strong> O robô atual coleta os leads de clientes potenciais e verifica quem está apto ao saque do FGTS. No entanto, é necessário construir uma base de dados consolidada que mantenha informações atualizadas sobre quais clientes estão aptos mês a mês.</p>
+            <h3>Soluções Propostas:</h3>
+            <ul class="solutions">
+                <li>
+                    <strong>Criação de um Banco de Dados Relacional:</strong>
+                    <ul>
+                        <li>Desenvolver um banco de dados centralizado em SQL (MySQL, PostgreSQL) para armazenar informações dos clientes (CPF, status FGTS, saldo, data de liberação).</li>
+                        <li>Atualizar a base mensalmente com base nos dados coletados pelo robô.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Automação de Consulta e Atualização:</strong>
+                    <ul>
+                        <li>Criar um script de integração para o robô consultar automaticamente os CPFs e atualizar o banco de dados com o status FGTS.</li>
+                        <li>Implementar notificações automáticas no WhatsApp oficial via API quando um cliente fica apto ao saque.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Dashboard de Gestão de Dados:</strong>
+                    <ul>
+                        <li>Desenvolver um painel visual (em ferramentas como Power BI, Tableau ou dashboards web customizados) para que os gestores acompanhem em tempo real o status dos clientes aptos ao saque.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="problem">
+            <h2>3. Problema: Consulta Manual de CPF e Saldo FGTS</h2>
+            <p><strong>Descrição:</strong> Atualmente, o robô coleta CPFs de forma específica, mas a consulta do saldo para saque FGTS é feita de forma manual. O objetivo é automatizar essa consulta.</p>
+            <h3>Soluções Propostas:</h3>
+            <ul class="solutions">
+                <li>
+                    <strong>Automação Total da Consulta:</strong>
+                    <ul>
+                        <li>Criar um módulo de integração com o robô que utiliza APIs de terceiros ou serviços bancários para verificar automaticamente os saldos disponíveis para FGTS com base nos CPFs.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Consulta Manual Simplificada:</strong>
+                    <ul>
+                        <li>Caso não seja possível automatizar totalmente, desenvolver uma interface web simples onde os operadores podem inserir o CPF e verificar diretamente o saldo no robô sem acessar outras plataformas.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Notificações Proativas:</strong>
+                    <ul>
+                        <li>Configurar notificações automáticas para avisar clientes diretamente no WhatsApp oficial sobre a liberação do saldo, reduzindo a necessidade de consulta manual.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+            <div class="problem">
+                <h2>4. Problema: Vinculação da URA com API Digital e QR Code</h2>
+                <p><strong>Descrição:</strong> Não é possível vincular a URA diretamente à API digital ou ao QR Code, dificultando o direcionamento dos clientes ao WhatsApp oficial.</p>
+                <h3>Soluções Propostas:</h3>
+                <ul class="solutions">
+                    <li><strong>URAs Inteligentes Integradas com API:</strong> Configurar a URA para que as chamadas sejam redirecionadas para um endpoint da API oficial do WhatsApp (Meta), garantindo que a interação se mantenha dentro da estrutura da plataforma oficial.</li>
+                    <li>Usar ferramentas como Twilio ou Dialogflow para criar uma URA híbrida que transita entre chamadas e mensagens WhatsApp.</li>
+                    <li><strong>QR Code Dinâmico Vinculado ao WhatsApp Oficial:</strong> Gerar QR Codes dinâmicos que redirecionam os clientes diretamente para o WhatsApp oficial, eliminando a necessidade de múltiplas integrações complexas.</li>
+                    <li><strong>Automação de Fluxo entre URA e HUG:</strong> Configurar uma API intermediária que capture os dados do cliente ao interagir com a URA e redirecione automaticamente ao HUG para continuidade do atendimento.</li>
+                </ul>
+            </div>
+            <div class="problem">
+                <h3>Ferramentas Recomendadas</h3>
+                <p><strong>Descrição:</strong> Abaixo estão as principais tecnologias recomendadas para implementar as soluções de automação, integração e monitoramento descritas nos problemas anteriores.</p>
+                <h3>Lista de Ferramentas:</h3>
+                <ul class="solutions">
+                    <li><strong>APIs e Integração:</strong> Twilio, Zenvia, Meta API (WhatsApp Oficial), Dialogflow.</li>
+                    <li><strong>Banco de Dados:</strong> MySQL, PostgreSQL.</li>
+                    <li><strong>Desenvolvimento Web:</strong> Node.js, Python (Flask/Django), React para o dashboard.</li>
+                    <li><strong>Automação:</strong> Zapier, Make (Integromat).</li>
+                    <li><strong>Monitoramento:</strong> Grafana, Prometheus.</li>
+                </ul>
+            </div>
+            
+    </div>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/ramon-monteiro" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/rmonteiror" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+    <footer>
+        <p>Ramon Monteiro | 2024</p>
+    </footer>
+</body>
+</html>
